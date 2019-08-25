@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proyecto js y jquery</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link id="theme" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- googlefonts -->
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barriecito|Notable&display=swap" rel="stylesheet">
+    <!-- Iconos fontawesome -->
+    <script src="https://kit.fontawesome.com/492f32ebe4.js"></script>
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--Mis scripts-->
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/consultas.js"></script>
+    
+    <!-- moment js Para trabajar con fechas. El orden influye-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    
+</head>
+
+<body>
+    <!--   Botonera colores-->
+    <div id="change-theme">
+        <div id="to-mint"></div>
+        <div id="to-black"></div>
+    </div>
+
+    <nav id="menu" class="navbar navbar-expand-md navbar-light fixed-top">
+        <a href="index.html"> <div id="logo"></div></a>
+        <a class="navbar-brand" href="#">Fotografía <i class="fas fa-camera"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio <i class="fas fa-home"></i><span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                     <a class="nav-link" href="curriculum.html">Curriculum <i class="fas fa-address-book"></i></a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-project-diagram"></i>
+ Proyecto js jquery</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="reloj.html"><i class="far fa-clock"></i> Reloj</a>
+                        <a class="dropdown-item" href="about.html"><i class="fas fa-user-astronaut"></i> Sobre mi</a>
+                        <a class="dropdown-item" href="contact.html"><i class="far fa-paper-plane"></i> Contacto</a>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <main id="global" role="main" class="container">
+        <!-- Slider -->
+        <div id="slider">
+  
+        </div>
+
+        <!-- Contenido -->
+       
+        <section class="container show-top-margin separate-rows tall-rows" id="content">
+            <div class="row show-grid">
+                <div id="botones" class="col-xs-12 col-md-8 about-stats">
+                                   
+                    <a href="#" id="informatica" class=" button-more" title="Formación en informática">Informática</a>
+                    <a href="#" id="electricidad" class=" button-more" title="Formación en electricidad">Electricidad</a>
+                    <a href="#" id="prl" class=" button-more" title="Formación en prevenciónd de riesgos laborales">PRL</a>
+                    <a href="#" id="experiencia" class=" button-more" title="Experiencia profesional">Experiencia</a>
+                    <div id="horas_total"></div>
+                </div>
+                <div id="local_storage" class="col-xs-6 col-md-4">
+                    <h3></h3>
+                </div>
+            </div>
+
+            <div id="mostrar_todo" class="row show-grid">
+
+                <section id="posts" class="col-xs-12 col-md-8">
+                    <!--  Cargar posts desde js  -->
+                </section>
+                <aside id="sidebar" class="col-xs-6 col-md-4">
+                    <div id="about">
+                     
+                    </div>
+                    <div id="login">
+                        <form>
+                            <h2>Identificate</h2>
+                            <div class="form-group">
+                                <label for="name">Nombre</label>
+                                <input id="form_name" type="text" class="form-control" name="name" placeholder="Nombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input id="form_mail" type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Introduce un mail">
+                                <small id="emailHelp" class="form-text text-muted">Nunca compartiremos su email con nadie más.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Contraseña</label>
+                                <input type="password" class="form-control" name="password" placeholder="Password">
+                            </div>
+
+                            <!--<button type="submit" class="btn btn-primary">Enviar</button>-->
+                            <button class="btn btn-info" title="Enviar">Entrar <i class="fas fa-arrow-right"></i></button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="page-footer font-small blue pt-4">
+
+            <!-- Footer Links -->
+            <div class="container-fluid text-center text-md-left">
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 mt-md-0 mt-3">
+
+                        <a href="#" class="subir">Ir arriba</a>
+
+                        <!-- Content -->
+                        <h5 class="text-uppercase">mucho ruido y pocas luces</h5>
+                        <p>Desarrollo de aplicaciones Web</p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none pb-3">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mb-md-0 mb-3">
+
+                        <!-- Links -->
+                        <h5 class="text-uppercase">Links</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 4</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mb-md-0 mb-3">
+
+                        <!-- Links -->
+                        <h5 class="text-uppercase">Links</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 4</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </div>
+            <!-- Footer Links -->
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3"> 2019 ©
+                <a href="https://www.muchoruidoypocasluces.com/">muchoruidoypocasluces.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+
+
+    </main><!-- /.container -->
+    <!--container-fluid-->
+
+
+    <!--   Bootstrap -->
+    <!--  Usando el del Slider que está arriba no hace falta cargarlo otra vez Jquery      -->
+    <!--  <script src="./bootstrap-4.3.1-dist/js/jquery-3.3.1.slim.min.js"></script>-->
+    <script src="./bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script src="./bootstrap-4.3.1-dist/js/popper.min.js"></script>
+
+</body></html>

@@ -1,0 +1,311 @@
+   [
+       {
+           "rama": "informatica",
+           "estudios": "ciclo",
+           "nombre": "Desarrollo de Aplicaciones Web",
+           "anno": "estos momentos",
+           "horas": "2000"
+        },
+       {
+           "rama": "informatica",
+           "estudios": "ciclo",
+           "nombre": "Técnico en Preimpresión Digital",
+           "anno": "2016",
+           "horas": "2000"
+        },
+       {
+           "rama": "electricidad",
+           "estudios": "curso",
+           "nombre": "Infraestructuras comunes de telecomunicación en viviendas y edificios(ICT)",
+           "anno": "2014",
+           "horas": "105"
+        },
+       {
+           "rama": "electricidad",
+           "estudios": "curso",
+           "nombre": "Automatismos Industriales, Electrotecnia",
+           "anno": "2014",
+           "horas": "264"
+        },
+       {
+           "rama": "electricidad",
+           "estudios": "curso",
+           "nombre": "Electrotécnia",
+           "anno": "2014",
+           "horas": "198"
+        },
+       {
+           "rama": "prl",
+           "estudios": "curso",
+           "nombre": "Formación Básica en Prevención de Riesgos Laborales",
+           "anno": "2012",
+           "horas": "60"
+        },
+       {
+           "rama": "electricidad",
+           "estudios": "ciclo",
+           "nombre": "Operario de instalaciones Eléctricas",
+           "anno": "1996",
+           "horas": "1800"
+        },
+       {
+           "rama": "prl",
+           "estudios": "curso",
+           "nombre": "Plataformas elevadoras móviles de personal",
+           "anno": "2018",
+           "horas": "6"
+        },
+       {
+           "rama": "informatica",
+           "estudios": "curso",
+           "nombre": "Creación de tienda Online Prestashop",
+           "anno": "2018",
+           "horas": "30"
+        },
+       {
+           "rama": "informatica",
+           "estudios": "curso",
+           "nombre": "Edición de video con Premiere",
+           "anno": "2018",
+           "horas": "30"
+        },
+       {
+           "rama": "informatica",
+           "estudios": "curso",
+           "nombre": "HTML5 y CSS3 Avanzado",
+           "anno": "2018",
+           "horas": "40"
+        },
+       {
+           "rama": "prl",
+           "estudios": "curso",
+           "nombre": "Operador de puente grua y operaciones de elevación de carga",
+           "anno": "2018",
+           "horas": "6"
+        },
+       {
+           "rama": "prl",
+           "estudios": "curso",
+           "nombre": "Seguridad de Trabajos en alturas",
+           "anno": "2017",
+           "horas": "8"
+        },
+       {
+           "rama": "prl",
+           "estudios": "curso",
+           "nombre": "Específico electricidad",
+           "anno": "2018",
+           "horas": "6"
+        },
+       {
+           "rama": "informatica",
+           "estudios": "curso",
+           "nombre": "Posicionamiento SEO de páginas Web",
+           "anno": "2017",
+           "horas": "30"
+        },
+       {
+           "rama": "informatica",
+           "estudios": "curso",
+           "nombre": "Retoque Digital fotográfico con Photoshop (Avanzado)",
+           "anno": "2017",
+           "horas": "30"
+        },
+       {
+           "rama": "informatica",
+           "estudios": "curso",
+           "nombre": "Cómo posicionar páginas web (Online)",
+           "anno": "2017",
+           "horas": "30"
+        },
+       {
+           "rama": "informatica",
+           "estudios": "curso",
+           "nombre": "Community Manager (Online)",
+           "anno": "2017",
+           "horas": "30"
+        },
+       {
+           "rama": "informatica",
+           "estudios": "curso",
+           "nombre": "Gestión de servidores web",
+           "anno": "2016",
+           "horas": "20"
+        },
+       {
+           "rama": "informatica",
+           "estudios": "curso",
+           "nombre": "Retoque digital con Photoshop(Avanzado)",
+           "anno": "2016",
+           "horas": "30"
+        },
+       {
+           "rama": "informatica",
+           "estudios": "curso",
+           "nombre": "Programación de Bases de Datos Relacionales, Modelado y almacenamiento de datos/Administración de bases de datos",
+           "anno": "2015",
+           "horas": "208"
+        },
+       {
+           "rama": "informatica",
+           "estudios": "curso",
+           "nombre": "Acceso a Bases de Datos e iniciación a PHP",
+           "anno": "2015",
+           "horas": "30"
+           },
+       {
+           "rama": "electricidad",
+           "estudios": "curso",
+           "nombre": "Implantación de sistemas domóticos e Inmóticos",
+           "anno": "2015",
+           "horas": "150"
+           },
+       {
+           "rama": "informatica",
+           "estudios": "curso",
+           "nombre": "Posicionamiento SEO y SEM(Online)",
+           "anno": "2014",
+           "horas": "30"
+           },
+       {
+           "rama": "informatica",
+           "estudios": "curso",
+           "nombre": "Posicionamiento SEO y SEM(Online)",
+           "anno": "2014",
+           "horas": "30"
+           },
+       {
+           "rama": "electricidad",
+           "estudios": "curso",
+           "nombre": "Interpretación gráfica (Dibujo técnico-Mecánica)",
+           "anno": "2014",
+           "horas": "132"
+           },
+       {
+           "rama": "electricidad",
+           "estudios": "curso",
+           "nombre": "Sistemas Automatizados (Neumática, Hidráulica)",
+           "anno": "2014",
+           "horas": "30"
+           },
+       {
+           "rama": "informatica",
+           "estudios": "curso",
+           "nombre": "Administración de Servidores y Páginas WEB",
+           "anno": "2013",
+           "horas": "305"
+           },
+       {
+           "rama": "informatica",
+           "estudios": "curso",
+           "nombre": "AUTOCAD 2011 2D para Fabricación Mecánica",
+           "anno": "2012",
+           "horas": "30"
+           },
+       {
+           "rama": "informatica",
+           "estudios": "curso",
+           "nombre": "TECNICO MANTENIMIENTO DE ORDENADORES Y REDES TCP/IP",
+           "anno": "2011",
+           "horas": "465"
+           },
+       {
+           "rama": "electricidad",
+           "estudios": "curso",
+           "nombre": "Diseño de circuitos eléctricos CADdy",
+           "anno": "2011",
+           "horas": "30"
+           },
+       {
+           "rama": "electricidad",
+           "estudios": "curso",
+           "nombre": "Diseño Y configuración de instalaciones Domóticas BUS EIB Knx",
+           "anno": "2011",
+           "horas": "30"
+           },
+       {
+           "rama": "electricidad",
+           "estudios": "curso",
+           "nombre": "Maquinas de CC y CA",
+           "anno": "2011",
+           "horas": "50"
+           },
+       {
+           "rama": "informatica",
+           "estudios": "curso",
+           "nombre": "2011 2D para Fabricación Mecánica",
+           "anno": "2012",
+           "horas": "30"
+           },
+       {
+           "rama": "electricidad",
+           "estudios": "curso",
+           "nombre": "Diseño Y configuración de instalaciones domóticas Centralizadas",
+           "anno": "2011",
+           "horas": "50"
+           },
+       {
+           "rama": "electricidad",
+           "estudios": "curso",
+           "nombre": "Mantenimiento electrónico y automatismos",
+           "anno": "2011",
+           "horas": "40"
+           },
+       {
+           "rama": "electricidad",
+           "estudios": "curso",
+           "nombre": "Circuitos CC y CA",
+           "anno": "2010",
+           "horas": "40"
+           },
+       {
+           "rama": "informatica",
+           "estudios": "curso",
+           "nombre": "Ofimática",
+           "anno": "2010",
+           "horas": "40"
+           },
+       {
+           "rama": "electricidad",
+           "estudios": "curso",
+           "nombre": "Programación Autómatas Siemens ",
+           "anno": "2009",
+           "horas": "60"
+           },
+       {
+           "rama": "electricidad",
+           "estudios": "curso",
+           "nombre": "Domótica, Corrientes Portadoras X10",
+           "anno": "2009",
+           "horas": "30"
+           },
+       {
+           "rama": "electricidad",
+           "estudios": "curso",
+           "nombre": "Neumática",
+           "anno": "2006",
+           "horas": "40"
+           },
+       {
+           "rama": "electricidad",
+           "estudios": "curso",
+           "nombre": "Instalador Electricista",
+           "anno": "2005",
+           "horas": "60"
+           },
+       {
+           "rama": "electricidad",
+           "estudios": "curso",
+           "nombre": "Autómatas en Lenguaje SFC-Grafcet Omron",
+           "anno": "2005",
+           "horas": "30"
+           },
+        {
+           "rama": "electricidad",
+           "estudios": "curso",
+           "nombre": "Electricidad / Electrónica Industrial",
+           "anno": "2011",
+           "horas": "60"
+           }    
+       
+    ]

@@ -1,0 +1,81 @@
+[
+    {
+        "empresa": "M.E.ETXEBESTE (Eléctrica)",
+        "categoria": "Oficial de primera",
+        "fecha": "Julio 2017 - Octubre 2017 (3 meses)",
+        "tareas": "Montaje de cuadros eléctricos en taller para empresa de diseño y fabricación de maquinaria de alta tecnología y precisión para la industria de los manipulados de papel y cartón, papeles especiales y de seguridad."
+    },
+    {
+        "empresa": "M.E. Etxebeste (Eléctrica)",
+        "categoria": "Oficial de primera",
+        "fecha": "Junio 2016 - Agosto 2016 (2 meses)",
+        "tareas": "Montaje de cuadros eléctricos en taller para empresa de   climatización e instalaciones eléctricas (fuerza, iluminación, maniobra, regulación ), entradas de materiales y comprobación."
+    },
+    {
+        "empresa": "Euskabea",
+        "categoria": "Oficial de tercera",
+        "fecha": "Octubre 2017 - Octubre 2018 (1 año)",
+        "tareas": "Montaje de cuadros en taller para CAF, fabricar hartings, distintos tipos de conectores (dbz, d-sub, etc..), rutado y conexionado, timbrado, pruebas.Montaje de núcleos y modificación en TreinItalia Roma para CAF.Conexionado de cuadros y grupos hidráulicos en central hidroeléctrica El Berbel Tudela."
+    },
+    {
+        "empresa": "Ondarribi Grafikagintza ",
+        "categoria": "Prácticas",
+        "fecha": "Marzo 2016 - Junio 2016 (3 meses)",
+        "tareas": "Elaborar diseños para distintos tipos de cartelería, papelería, programas, flyers, dípticos, identidad corporativa y actualización  web de la empresa, uso de los programas Corel Draw y Adobe,  fotografía, retoque fotográfico, impresión, digitalización de documentos y planos,  corte en guillotina, laminado, preparación de archivos para imprimir,  planchado ploter de corte en camisetas, etc."
+    },
+    {
+        "empresa": "M.E.Etxebeste(Eléctrica)",
+        "categoria": "Oficial de tercera",
+        "fecha": "Junio 2015 - Septiembre 2015(3 meses)",
+        "tareas": "Montaje de cuadros eléctricos en taller para empresa de climatización e instalaciones eléctricas(fuerza, iluminación, maniobra, regulación)."
+   },
+    {
+        "empresa": "Euskabea(Eléctrica)",
+        "categoria": "Oficial de tercera",
+        "fecha": "Junio 2013 - Septiembre 2013(3 meses)",
+        "tareas": "Montaje de Hartings para CAF en taller(Crimpado, aislado y numerado) e instalaciones eléctricas."
+   },
+    {
+        "empresa": "La Bacaladera",
+        "categoria": "Ayudante de mantenimiento",
+        "fecha": "Agosto 2010 - Febrero 2011(6 meses)",
+        "tareas": "Mantenimiento en general"
+   },
+    {
+        "empresa": "INST.ELECTRICAS ETXEBESTE",
+        "categoria": "Oficial de 2º",
+        "fecha": "Febrero 2009 - Mayo 2010(1 año y 3 meses)",
+        "tareas": " Montaje de automatismos e instalaciones tanto en industria como en locales de pública concurrencia.(Montaje de cuadros eléctricos, ampliación colegio público Beasain, etc.)."
+   },
+    {
+        "empresa": "Ingesymen",
+        "categoria": "Agosto 2008 - Febrero 2009(6 meses)",
+        "fecha": "Agosto 2008 - Diciembre 2008(4 meses)",
+        "tareas":"Oficial de 2 º Realización del montaje eléctrico en industria en la papelera Zikuñaga.Desde la colocación de conductos, cableado y conexionado de cuadros, motores, equipos eléctricos, etc."
+    },
+    {
+        "empresa": "Zuaznabar",
+        "categoria": "Oficial de 2º",
+        "fecha": "Octubre 2004 - Agosto 2008(3 años y 10 meses)",
+        "tareas": "(Encargado de obra) Instalaciones en oficinas, garajes, centros y comercios; (Oficinas en C.C.Mamut, Cruz Roja San Sebastián, cines Antiguo Berri, Centro Gautena, ampliación colegio público Intxaurrondo, colegio público Igueldo, etc.)."
+    },
+    {
+        "empresa": "Montajes Eléctricos Yosu",
+        "categoria": "Auxiliar de electricidad",
+        "fecha": "Enero 2000 - Septiembre 2004(4 años y 8 meses)",
+        "tareas":"Oficial de 3 º Realización del montaje eléctrico en industria y Centros comerciales.Desde la colocación de conductos y cableado hasta el montaje y conexión de cuadros y equipos(Talleres mecánicos de automóviles, La Bretxa, Urbil, diversos pabellones en Jundiz(Vitoria), etc.)."
+    },
+    {
+        "empresa": "IMPRESIONES TRANSKRIT SA",
+        "categoria": "Ayudante máquinista",
+        "fecha": "Junio 1997 - Didciembre 1999(2 años y 6 meses)",
+        "tareas":"Peón Ayudante de maquinista y manipulado, empaquetado, colocación de etiquetas, limpieza de rodillos, cambio de tintas, colas, etc.."
+    },
+    {
+        "empresa": "Electricidad Arama",
+        "categoria": "Prácticas",
+        "fecha": "Febrero 1997 - Mayo 1997(3 meses)",
+        "tareas":"Instalación y montaje de cuadros eléctricos e instalaciones en disitintas industrias."
+    }
+]
+

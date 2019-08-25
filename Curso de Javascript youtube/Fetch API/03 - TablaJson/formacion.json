@@ -1,0 +1,52 @@
+[
+    {
+        "rama": "informatica",
+        "estudios": "ciclo",
+        "nombre": "Desarrollo de Aplicaciones Web",
+        "anno": "cursando"
+        },
+
+    {
+        "rama": "informatica",
+        "estudios": "ciclo",
+        "nombre": "Técnico en Preimpresión Digital",
+        "anno": "2016"
+        },
+
+
+    {
+        "rama": "electricidad",
+        "estudios": "oferta parcial",
+        "nombre": "Infraestructuras comunes de telecomunicación en viviendas y edificios(ICT)",
+        "anno": "2014"
+        },
+
+    {
+        "rama": "electricidad",
+        "estudios": "oferta parcial",
+        "nombre": "Automatismos Industriales, Electrotecnia, Técnico en instalaciones eléctricas y automáticas",
+        "anno": "2014"
+        },
+
+    {
+        "rama": "electricidad",
+        "estudios": "prl",
+        "nombre": "Formación Básica en Prevención de Riesgos Laborales",
+        "anno": "2012"
+        },
+
+    {
+        "rama": "electricidad",
+        "estudios": "ciclo",
+        "nombre": "Iniciación Profesional en Electricidad",
+        "anno": "1996"
+        },
+
+    {
+        "rama": "estudios basicos",
+        "estudios": "ciclo",
+        "nombre": " 1º REM",
+        "anno": "1995"
+        }
+]
+

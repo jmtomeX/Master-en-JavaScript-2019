@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Bienvenido al {{ title }}!
+  </h1>
+  <p>Vamos a aprender Angular</p>
+  
+  <button (click) = "ocultarVideoJuegos(false)" *ngIf = "mostrar_videojuegos">Ocultar</button>
+  <button (click) = "ocultarVideoJuegos(true)" *ngIf = "!mostrar_videojuegos">Mostrar</button>
+  
+  <videojuego *ngIf = "mostrar_videojuegos"></videojuego>
+   <zapatillas></zapatillas>
+   <cursos></cursos>
+    
+  
+</div>
+

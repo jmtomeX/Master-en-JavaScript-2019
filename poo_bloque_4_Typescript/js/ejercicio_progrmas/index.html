@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Poo y TypeScript</title>
+    <meta charset="UTF-8">
+    <html lang="es">
+
+    </html>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!--    <script type="text/javascript" src="js/01_clase_json.js"></script>-->
+    <script type="text/javascript" src="programa.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Anton', sans-serif;
+            border: 1px black solid;
+            padding: 20px;
+        }
+
+        #container {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        :placeholder-shown {
+            /* Se aplica al input cuando el texto del placeholder se está mostrando */
+            background-color: powderblue;
+        }
+
+        ::placeholder {
+            /* Se aplica específicamente al texto del placeholder */
+            color: white;
+            font-size: 1em;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <form>
+            <input type="text" id="nombre" placeholder="Nombre del programa"><br>
+
+            <input type="text" id="version" placeholder="Versión del programa"><br>
+            <input type="button" value="Guardar" onclick="guardar()">
+            <h4>Listado de programas</h4>
+            <ul id="listado">
+
+            </ul>
+        </form>
+    </div>
+
+</body></html>

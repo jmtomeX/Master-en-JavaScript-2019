@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Consumo servicio Rest con Fetch</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+</head>
+
+<body style="font-family: 'Oswald', sans-serif;">
+    <div id="fetch">
+
+
+        <h1 style="margin: 0">Fetch</h1>
+        <h3 style="margin: 0">Es una manera de hacer peticiones a un backend</h3>
+
+        <hr>
+        <h1>Listado de usuarios</h1>
+        <div id="usuarios">
+            <span id="loading">
+                Cargando datos globales...
+            </span>
+        </div>
+        <hr>
+        <div id="profesor">
+            Cargando profesor....
+        </div>
+        <hr>
+        <div id="janet">
+            <span id="loading">
+                Cargando usuario...
+            </span>
+        </div>
+    </div>
+    <div id="map">
+        <h4>map() consultar consola</h4>
+        <form action="#" method="post" onsubmit="return false;">
+            <p>
+                Deporte favorito:
+                <select name="deporte">
+                    <option>Fútbol</option>
+                    <option>Críquet</option>
+                    <option>Básquetbol</option>
+                    <option>Hockey</option>
+                    <option>Tenis</option>
+                </select>
+            </p>
+            <br>
+            <p><strong>Select your favorite species of flamingo.</strong></p>
+            <p>
+                <select name="favorites">
+                    <option value="American">American flamingo</option>
+                    <option value="Greater">Greater flamingo</option>
+                    <option value="Lesser">Lesser flamingo</option>
+                    <option selected value="Andean">Andean flamingo</option>
+                    <option value="Chilean">Chilean flamingo</option>
+                    <option value="James's">James's flamingo</option>
+                </select>
+            </p>
+            <br>
+
+            <input id="btnEnviar" type="submit" value="Enviar">
+        </form>
+    </div>
+    <div id="fechas">
+
+
+    </div>
+    <!--<script type="text/javascript" src="js/36_fetch.js"></script>
+    <script type="text/javascript" src="js/36_fetch_y_promesas.js"></script>
+    <script type="text/javascript" src="js/36_crear_promesas.js"></script>
+    <script type="text/javascript" src="js/37_try_catch.js"></script>-->
+    <script type="text/javascript" src="js/38_fechas.js"></script>
+    <!--<script type="text/javascript" src="js/map_funcion.js"></script>-->
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+/*CSS Proyecto***********************************/
+:root {
+    --color-principal: #bcded4;
+}
+
+body {
+    background: white;
+    transition-timing-function: ease-in;
+    transition-property: all;
+    transition-duration: 1s;
+}
+#menu {
+    background-color:var(--color-principal);
+    transition: all 1s ease-in;
+}
+
+#logo {
+
+    background-image: url("../img/logo.gif");
+}
+
+#logo:hover {
+    background-image: url("../img/logo_hover.gif");
+}
+
+h2 {
+    color: dimgrey;
+}
+
+.post .date {
+    color: beige;
+}
+.button-more {
+    background: dimgrey;
+    color: var(--color-principal);
+}
+
+.button-more:hover {
+    background: #ffffff;
+    color: var(--color-principal);
+}
+footer {
+    background-color: var(--color-principal);
+    border: 2px solid #ffffff;
+}
+
+/*Fin CSS Proyecto*******************************/
+
+
+/*Columnas Plantilla***********************************/
+
+
+
+.show-grid [class^=col-] {
+    border: 10px solid #ffffff;
+    background-color: var(--color-principal);
+}
+
+/*Fin Columnas Plantilla***********************************/

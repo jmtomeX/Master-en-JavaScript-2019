@@ -1,0 +1,259 @@
+:root {
+    --color-principal: #bcded4;
+}
+
+@media screen and (max-width: 480px) {}
+
+@media screen and (min-width: 768px) {
+    #sidebar {
+        text-align: justify;
+        max-height: 1000px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #sidebar {
+        text-align: justify;
+        max-height: 800px;
+
+    }
+}
+
+/*CSS Proyecto***********************************/
+#logo {
+    width: 250px;
+    height: 80px;
+    margin-right: 10px;
+    background-image: url("../img/logo.gif");
+    background-size: 100%;
+    transition: all 300ms;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    -webkit-background-size: 100%;
+    -khtml-background-size: 100%;
+}
+
+#logo:hover {
+    background-image: url("../img/logo_hover.gif");
+    background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    -webkit-background-size: 100%;
+    -khtml-background-size: 100%;
+}
+
+#menu a:hover {
+    color: antiquewhite;
+}
+
+h2 {
+    font-size: 30px;
+    color: dimgrey;
+}
+
+.post .date {
+    color: beige;
+    display: block;
+}
+
+.post p {
+    margin: 10px 0 20px 0;
+    text-align: justify;
+}
+
+.button-more {
+    font-size:25.2px;
+    display:inline-block;
+    width: 150px;
+    padding: 10px;
+    margin:10px 20px 10px 0;
+    background: dimgrey;
+    /*float: right;*/
+    line-height: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button-more[type='submit'] {
+    margin-top: 30px;
+}
+
+.button-more:hover {
+    background: #ffffff;
+   
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+
+footer {
+    border: 2px solid #ffffff;
+}
+
+#slider {
+    margin-top: 120px;
+
+}
+
+.bx-wrapper,
+.bx-viewport {
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px ¡important;
+}
+
+.btn-formacion {
+    float: left ¡important;
+    width: 100px;
+    display: inline;
+
+}
+
+#botones {
+    padding: 20px 0 20px 20px;
+}
+
+#horas_totales  {
+   float: right;
+}
+
+#change-theme {
+    position: fixed;
+    top: 40%;
+    background: rgba(51, 51, 51, 0.5);
+    width: 50px;
+    height: 65px;
+    
+}
+
+#to-mint,
+#to-black {
+    width: 25px;
+    height: 25px;
+    border: 1px solid white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    z-index:100
+}
+
+#to-mint {
+    background: var(--color-principal);
+}
+
+#to-black {
+    background: black;
+}
+
+.subir {
+    color: var(--color-principal);
+    background: black;
+    text-decoration: none;
+    display: block;
+    float: right;
+    border: 1px solid #fff;
+    -moz-border-radius: 52px;
+    -webkit-border-radius: 52px;
+    padding: 10px;
+}
+
+.subir:hover {
+    color: black;
+    background: var(--color-principal);
+}
+
+#reloj {
+    font-size: 6em;
+    display: flex;
+    justify-content: center;
+    line-height: 4em;
+    font-family: 'Barriecito', cursive;
+}
+
+.post h2{
+    font-family: 'Notable', sans-serif;
+    color: black;
+}
+
+.form-group button {
+    margin-top: 1em;
+}
+
+fieldset.scheduler-border {
+    border: 1px groove #ddd !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+            box-shadow:  0px 0px 0px 0px #000;
+}
+
+legend.scheduler-border {
+    font-size: 1.2em !important;
+    font-weight: bold !important;
+    text-align: left !important;
+}
+/*Fin CSS Proyecto*******************************/
+
+
+/*Columnas Plantilla***********************************/
+
+.show-grid [class^=col-] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 5px solid #ffffff;
+    z-index: 1;
+}
+
+.responsive-utilities-test .col-xs-6 {
+    margin-bottom: 10px
+}
+
+#inputSeleccionado {
+    border-color: rgba(82, 168, 236, .8);
+    outline: 0;
+    outline: thin dotted \9;
+    -moz-box-shadow: 0 0 8px rgba(82, 168, 236, .6);
+    box-shadow: 0 0 8px rgba(82, 168, 236, .6)
+}
+
+.bs-glyphicons {
+    padding-left: 0;
+    padding-bottom: 1px;
+    margin-bottom: 20px;
+    list-style: none;
+    overflow: hidden
+}
+
+
+@media(min-width:768px) {
+    .bs-glyphicons li {
+        width: 12.5%
+    }
+}
+.show-grid {
+    margin-bottom: 2em
+}
+.show-grid:first-child {
+    margin-top: 7em;
+}
+
+.form-error {
+    height: auto;
+    width: 50%;
+    float: right;
+    padding: 5px;
+    background: dimgrey;
+    color: white;
+    font-size: 0.8em;
+    margin: 25px 0 0 5px;
+  
+    
+    
+}
+
+/*Fin Columnas Plantilla***********************************/
