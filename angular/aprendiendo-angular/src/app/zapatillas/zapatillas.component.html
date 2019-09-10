@@ -1,8 +1,50 @@
-<h2>{{titulo}}</h2>
+<h2>{{ titulo }}</h2>
 
+<p>Añadir marca</p>
+<!-- Two way data-binding "[(ngModel)]"" Permite modificar una propiedad en tiempo real, de nuestra componente en este caso mi_marca -->
+<p><input type="text" [(ngModel)]="mi_marca"/></p>
+<button (click)= "getMarca()">Mostrar marca</button>
+<button (click)= "addMarca()">Añadir marca</button>
+<p>{{mi_marca}}</p>
+
+<h2>Compra las zapatiillas de las mejores marcas</h2>
+<ul>
+     <!-- acceder al indice -->
+  <li *ngFor="let marca of marcas; let indice = index">{{(indice+1) + '. '  + marca }}</li>
+</ul>
+<h2>Las deportivas que tenemos disponibles</h2>
+<ul>
+    <!-- recorrer el array de zapatillas -->
+  <li *ngFor="let deportiva of zapatillas">
+    <span [ngStyle] = "{
+        'text-decoration': !deportiva.stock ? 'line-through' : 'none'
+    }">
+      {{ deportiva.nombre }} - <strong>{{ deportiva.precio }} € </strong>
+    </span> 
+      <span
+        *ngIf="deportiva.precio <= 80"
+        [style.background]="deportiva.precio <= 80 ? 'green' : 'transparent'"
+        [style.color]="deportiva.precio <= 80 ? 'white' : 'black'"
+        >!EN OFERTA¡</span>
+   
+  </li>
+  <h2>Fuera de Stock</h2>
 
     <ul>
-        <li>Reebok Classic</li>
-        <li>Fila Retro</li>
-        <li>Adidas Yezzy</li>
+        <li *ngFor= "let deportiva of zapatillas">
+            <div *ngIf = "!deportiva.stock">
+                {{deportiva.nombre}}
+            </div> 
+        </li>
     </ul>
+</ul>
+
+<!-- ngSwitch -->
+<p>El color de la mayoría de nuestras zapatiillas es:</p>
+<input type="text" [(ngModel)]= "color">
+<ul [ngSwitch]= "color">
+  <li *ngSwitchCase="'yellow'">El color predominante es el <span [ngStyle]="{'background':color}"> amarillo</span></li>
+  <li *ngSwitchCase="'red'">El color predominante es el <span [ngStyle]="{'background':color}"> rojo</span></li>
+  <li *ngSwitchCase="'blue'">El color predominante es el <span [ngStyle]="{'background':color}"> azul</span></li>
+  <li *ngSwitchCase="'orange'">El color predominante es el <span [ngStyle]="{'background':color}"> naranja</span></li>
+</ul>

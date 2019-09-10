@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+// para poder usar los elementos de los formulario hay que cargar el paquete FormsModule
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-// mi módulo de angular
+
+// mis módulos de angular
 import { VideojuegoComponent } from './videojuego/videojuego.component';
 import { ZapatillasComponent } from './zapatillas/zapatillas.component';
 import { CursosComponent } from './cursos/cursos.component';
@@ -14,7 +16,8 @@ import { CursosComponent } from './cursos/cursos.component';
       CursosComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
