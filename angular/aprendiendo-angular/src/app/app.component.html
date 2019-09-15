@@ -1,13 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <!-- directiva de atributo ngStyle -->
-<div [ngStyle]="{
-   'background': config.fondo,
-   'padding' : '20px',
-   'text-align': 'center',
-   'border': '5px solid black',
-   'border-color':config.color
-  
-  }">
+<div
+  [ngStyle]="{
+    background: config.fondo,
+    padding: '20px',
+    'text-align': 'center',
+    border: '5px solid black',
+    'border-color': config.color
+  }"
+>
   <h1>Bienvenido al {{ title }}!</h1>
   <p>{{ descripcion }}</p>
 
@@ -18,8 +19,16 @@
     Mostrar
   </button>
 
+  <!--
   <videojuego *ngIf="mostrar_videojuegos"></videojuego>
   <zapatillas></zapatillas>
   <cursos></cursos>
   <cursos></cursos>
+ -->
+<!-- Cargamos la etiquetas del sistema de rutas
+Se cargará el componente que se le indica en la ruta
+-->
+<router-outlet>
+
+</router-outlet>
 </div>
