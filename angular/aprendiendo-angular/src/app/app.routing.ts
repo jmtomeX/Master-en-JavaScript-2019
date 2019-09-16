@@ -13,9 +13,12 @@ import { CursosComponent } from './cursos/cursos.component';
 const appRoutes: Routes = [
     // ruta principal
     {path: '', component: HomeComponent},
+    // ruta alternativa para que no se quede marcado el .active
+    {path: 'home', component: HomeComponent},
     {path: 'zapatillas', component: ZapatillasComponent},
-    {path: 'videojuego', component: VideojuegoComponent},
+    {path: 'videojuegos', component: VideojuegoComponent},
     {path: 'cursos', component: CursosComponent},
+    {path: 'cursos/:nombre/:followers', component: CursosComponent},
     // ruta 404, se le pone en último lugar para que no de errores
     {path:  '**', component: HomeComponent}
 

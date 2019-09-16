@@ -11,16 +11,24 @@
 >
   <h1>Bienvenido al {{ title }}!</h1>
   <p>{{ descripcion }}</p>
-
+  <nav>
+    <ul>
+    <li ><a [routerLink]="['/home']" [routerLinkActive] = "['active']">Home</a></li>
+    <li><a [routerLink]="['zapatillas']" [routerLinkActive] = "['active']">Zapatillas</a></li>
+    <li><a [routerLink]="['cursos']" [routerLinkActive] = "['active']">Cursos</a></li>
+    <li><a [routerLink]="['videojuegos']" [routerLinkActive] = "['active']">Videojuegos</a></li>
+    </ul>
+  </nav>
   <button (click)="ocultarVideoJuegos(false)" *ngIf="mostrar_videojuegos">
-    Ocultar
+    Ocultar Videojuegos
   </button>
   <button (click)="ocultarVideoJuegos(true)" *ngIf="!mostrar_videojuegos">
-    Mostrar
+    Mostrar Videojuegos
   </button>
 
-  <!--
-  <videojuego *ngIf="mostrar_videojuegos"></videojuego>
+ 
+   <videojuego *ngIf="mostrar_videojuegos"></videojuego>
+   <!--
   <zapatillas></zapatillas>
   <cursos></cursos>
   <cursos></cursos>

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 // cargar el archivo configuración.ts para poder usar sus variables del objeto json
-import { Configuracion } from './models/configuracion'
+import { Configuracion } from './models/configuracion';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +22,7 @@ export class AppComponent {
   }
   
   ocultarVideoJuegos(value) {
-      this.mostrar_videojuegos = value;
+   this.mostrar_videojuegos = value; 
   } 
 
 }

@@ -1,1 +1,8 @@
-<p>cursos works!</p>
+<h1>Componente Cursos</h1>
+<button (click)="redirigir()">Llevame a zaptillas</button>
+<h3 *ngIf="nombre">Bienvenido {{nombre}}</h3>
+<h3 *ngIf="followers">Tus seguidores son {{followers}}</h3>
+
+<!--
+    ejemplo de url
+    http://localhost:4200/cursos/jose%20mari/45234 -->

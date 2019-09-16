@@ -1,1 +1,15 @@
-<p>home works!</p>
+<h2>Página principal</h2>
+<div *ngIf="identificado;then siIdentificado else noIdentificado"></div>
+
+<ng-template #siIdentificado>
+    <h3>Estás identificado en la aplicación</h3>
+    <button (click)="unSetIdentificado()">Borrar Identificación</button>
+</ng-template> 
+
+
+<!-- ng-template se utiliza para crear un else, la # se utiliza para crear variables dentro de angular -->
+<ng-template #noIdentificado>
+    <p>No estás identificado, pulsa este botón para identificarte</p>
+    <button (click)="setIdentificado()">Identificate</button>
+
+</ng-template>
