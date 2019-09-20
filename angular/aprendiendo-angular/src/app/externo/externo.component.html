@@ -1,0 +1,20 @@
+<!-- para utilizar la pipe o filtro hay que usar la pipe | -->
+{{ fecha | date: "fullDate" }}
+<br>
+{{ fechaActual | date: "fullDate" | uppercase }} <br>
+{{'HOLA MUNDO CON PIPES' | lowercase}} <br>
+<br>
+{{ fecha | date: "dd/MM/yyyy" }} <br>
+{{424 | calculadora:2}} <br>
+
+<hr />
+<!-- cargamos el usuario que queramos desde la api -->
+<input type="text" [(ngModel)]="userId" (keyUp.enter)="cargaUsuario()" />
+<br/>
+<br/>
+<!-- cuando user sea false -->
+<div *ngIf="!user">...Cargando</div>
+<div *ngIf="user">
+  <img src="{{ user.avatar }}" alt="" width="200" />
+  <h2>{{ user.first_name + " " + user.last_name }}</h2>
+</div>
