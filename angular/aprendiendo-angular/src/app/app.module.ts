@@ -17,7 +17,8 @@ import { ExternoComponent } from './externo/externo.component';
 import { fromEventPattern } from 'rxjs';
 
 // pipe 
-import { CalculadoraPipe} from './pipes/calculadora.pipe'
+import { CalculadoraPipe} from './pipes/calculadora.pipe';
+import { ContactoComponent } from './contacto/contacto.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { CalculadoraPipe} from './pipes/calculadora.pipe'
       CursosComponent,
       HomeComponent,
       ExternoComponent,
-      CalculadoraPipe
+      CalculadoraPipe,
+      ContactoComponent
   ],
   imports: [
     BrowserModule,

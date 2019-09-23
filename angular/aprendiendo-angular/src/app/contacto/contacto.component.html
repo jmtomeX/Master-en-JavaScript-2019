@@ -1,0 +1,62 @@
+<h2>Contacto</h2>
+<!-- Para vaciar el formulario se le pasa  como parámetro el formulario al método onSubmit -->
+<form #formContacto="ngForm" (ngSubmit)="onSubmit(formContacto)">
+  <label for="nombre">Nombre</label>
+  <input
+    type="text"
+    name="nombre"
+    #nombre="ngModel"
+    [(ngModel)]="contacto_usuario.nombre"
+    required
+    pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}"
+  />
+  <span *ngIf="nombre.touched && !nombre.valid">
+    El nombre es obligatorio
+  </span>
+  <label for="apellidos">Apellidos</label>
+  <input
+    type="text"
+    name="apellidos"
+    #apellidos="ngModel"
+    [(ngModel)]="contacto_usuario.apellidos"
+    required
+    pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}"
+  />
+  <!-- Cuando el campo haya sido tocado y este vacio, muestra el span  -->
+  <span *ngIf="apellidos.touched && !apellidos.valid">Los apellidos son obligatorios
+  </span>
+  <label for="email">Email</label>
+  <input
+    type="email"
+    name="email"
+    #email="ngModel"
+    [(ngModel)]="contacto_usuario.email"
+    pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+    required
+  />
+  <span *ngIf="email.touched && !email.valid">
+    El email es obligatorio
+  </span>
+  <label for="mensaje">Mensaje</label>
+  <textarea
+    name="mensaje"
+    for="mensaje"
+    placeholder="Describe brevemente en menos de 300 carácteres"
+    maxlength="300"
+    #mensaje="ngModel"
+    [(ngModel)]="contacto_usuario.mensaje"
+    required
+  ></textarea>
+  <span *ngIf="mensaje.touched && !mensaje.valid">
+    El mensaje es obligatorio
+  </span>
+  <input
+    type="submit"
+    value="Enviar"
+    [disabled]="!formContacto.form.valid"
+    [ngStyle]="{
+      'background-color': !formContacto.form.valid ? 'red' : 'black'
+    }"
+  />
+  <input type="reset">
+</form>

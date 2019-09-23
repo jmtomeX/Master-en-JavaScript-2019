@@ -1,0 +1,24 @@
+hr {
+  border: 0;
+  height: 4px;
+  margin: 40px;
+  background-image: linear-gradient(left, rgb(238, 238, 238), black,rgb(238, 238, 238));
+  background-image:-webkit-linear-gradient(left, rgb(238, 238, 238), black, rgb(238, 238, 238));
+  background-image:-moz-linear-gradient(left, rgb(238, 238, 238), black, rgb(238, 238, 238));
+  text-align: center;
+}
+hr:after {
+  content: "componentes";
+  position: relative;
+  top: -12px;
+  display: inline-block;
+  width: 100px;
+  height: 24px;
+  padding: 0;
+  border: 2px solid black;
+  border-radius: 24px;
+  background: black;
+  color: white;
+  font-size: 12px;
+  line-height: 24px;
+}

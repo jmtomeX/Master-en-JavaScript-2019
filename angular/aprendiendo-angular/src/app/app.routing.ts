@@ -9,6 +9,7 @@ import { ZapatillasComponent } from './zapatillas/zapatillas.component';
 import { VideojuegoComponent } from './videojuego/videojuego.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { ExternoComponent } from './externo/externo.component';
+import { ContactoComponent } from './contacto/contacto.component';
 // Array de rutas, aquí es donde se dan de alta y configuran las rutas
 const appRoutes: Routes = [
     // ruta principal
@@ -20,6 +21,7 @@ const appRoutes: Routes = [
     {path: 'cursos', component: CursosComponent},
     {path: 'cursos/:nombre/:followers', component: CursosComponent},
     {path: 'externo', component: ExternoComponent},
+    {path: 'contacto', component: ContactoComponent},
     // ruta 404, se le pone en último lugar para que no de errores
     {path:  '**', component: HomeComponent}
 

@@ -16,11 +16,20 @@ export class PeticionesService {
 
     // inyectamos el servicio http para poder usar el servicio para las peticiones
     constructor(public _http: HttpClient) {
-this.url = "https://reqres.in/"
+        this.url = "https://reqres.in/"
     }
     // devuelve un observalbe de cualquier tipo
     getUser(UserId): Observable<any> {
-        // usamos httoClient
+        // usamos httpClient
         return this._http.get(this.url + "api/users/" + UserId);
+    }
+
+    addUser(user): Observable<any> {
+        // convertir un objeto js a un json.string
+        let params = JSON.stringify(user);
+        // tipo de cabecera
+        let headers = new HttpHeaders().set('Content-type', 'application/json');
+
+        return this._http.post(this.url + 'api/users', params, { headers: headers })
     }
 }
