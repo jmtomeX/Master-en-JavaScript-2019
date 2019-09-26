@@ -13,5 +13,7 @@ router.post('/test', ProjectController.test);
 router.post('/save-project', ProjectController.saveProject);
 // la ? indica que el parámetro id es opcional
 router.get('/project/:id?', ProjectController.getProject);
+// sacar resultados del backend
+router.get('/projects', ProjectController.getProjects);
 // utliza la variable router para poderlo utilizarolo importarlo
 module.exports = router;

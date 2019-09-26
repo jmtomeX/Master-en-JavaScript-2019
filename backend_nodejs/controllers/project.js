@@ -67,6 +67,25 @@ var controller = {
         project
       });
     });
+  },
+
+  // Método para listar todos los documentos
+  getProjects: function(req, res) {
+    // find saca todos los documentos que hay dentro de una entidad
+    // se le puede pasar un where project.find({year:2019})
+    // exec cuando saque los resultados
+    // sort() con el simbolo + o - ordena de mayor a menor
+    Project.find({}).sort('-year').exec((err, projects) => {
+      if (err)
+        return res
+          .status(500)
+          .send({ mesagge: "Error al devolver los datos." });
+      if (!projects)
+        return res
+          .status(404)
+          .send({ mesagge: "No  hay proyectos que mostrar." });
+      return res.status(200).send({ projects });
+    });
   }
 };
 
