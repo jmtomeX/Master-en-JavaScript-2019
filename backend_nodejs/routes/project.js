@@ -15,5 +15,7 @@ router.post('/save-project', ProjectController.saveProject);
 router.get('/project/:id?', ProjectController.getProject);
 // sacar resultados del backend
 router.get('/projects', ProjectController.getProjects);
+// modificar un documento
+router.put('/project/:id', ProjectController.updateProject);
 // utliza la variable router para poderlo utilizarolo importarlo
 module.exports = router;

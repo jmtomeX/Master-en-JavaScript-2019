@@ -75,18 +75,45 @@ var controller = {
     // se le puede pasar un where project.find({year:2019})
     // exec cuando saque los resultados
     // sort() con el simbolo + o - ordena de mayor a menor
-    Project.find({}).sort('-year').exec((err, projects) => {
-      if (err)
-        return res
-          .status(500)
-          .send({ mesagge: "Error al devolver los datos." });
-      if (!projects)
-        return res
-          .status(404)
-          .send({ mesagge: "No  hay proyectos que mostrar." });
-      return res.status(200).send({ projects });
-    });
+    Project.find({})
+      .sort("-year")
+      .exec((err, projects) => {
+        if (err)
+          return res
+            .status(500)
+            .send({ mesagge: "Error al devolver los datos." });
+        if (!projects)
+          return res
+            .status(404)
+            .send({ mesagge: "No  hay proyectos que mostrar." });
+        return res.status(200).send({ projects });
+      });
+  },
+
+  // actualizar documento
+  updateProject: function(req, res) {
+    // recoger un parámetro por la url para modificarlo
+    var projectId = req.params.id;
+    // recoger todo el body de la petición, el objeto completo con los datos ya actualizados de la petición
+    var update = req.body;
+    // para que nos devuelva el objeto nuevo se le añade un tercer parámetro{new:true}, si no nos devolvería el antiguo en postman aunque lo cambia en la bbdd.
+    Project.findByIdAndUpdate(
+      projectId,
+      update,
+      { new: true },
+      (err, projectUpdated) => {
+        if (err)
+          return res.status(500).send({ message: "Error al actualizar." });
+        if (!projectUpdated)
+          return res
+            .status(404)
+            .send({ mesagge: "No existe el proyecto para actualizar." });
+
+        return res.status(200).send({
+          project: projectUpdated
+        });
+      }
+    );
   }
 };
-
 module.exports = controller;
