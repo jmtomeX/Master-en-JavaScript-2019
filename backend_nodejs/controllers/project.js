@@ -114,6 +114,24 @@ var controller = {
         });
       }
     );
+  },
+  // Método para borrar un documento
+  deleteProject: function(req, res) {
+    var projectId = req.params.id;
+    Project.findByIdAndDelete(projectId, (err, projectRemove) => {
+      if (err)
+        return res
+          .status(500)
+          .send({ message: "No se ha podido borrar el proyecto." });
+      if (!projectRemove)
+        return res
+          .status(404)
+          .send({ mesagge: "No se puede eliminar ese proyecto." });
+
+      return res.status(200).send({
+        project: projectRemove
+      });
+    });
   }
 };
 module.exports = controller;

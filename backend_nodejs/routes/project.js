@@ -17,5 +17,8 @@ router.get('/project/:id?', ProjectController.getProject);
 router.get('/projects', ProjectController.getProjects);
 // modificar un documento
 router.put('/project/:id', ProjectController.updateProject);
+// eliminar un documento
+router.delete('/project/:id', ProjectController.deleteProject);
+
 // utliza la variable router para poderlo utilizarolo importarlo
 module.exports = router;
