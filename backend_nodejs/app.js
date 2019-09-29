@@ -18,7 +18,23 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // CORS
-
+/*
+configurar las cabeceras y el acceso CORS en NodeJS.
+Cuando hacemos peticiones AJAX con jQuery o Angular a un backend o un API REST es normal que tengamos problemas con el acceso CORS en NodeJS y nos fallen las peticiones.
+Para eso podemos crear un middleware como este
+qué es el CORS
+Permite el acceso de un dominio a otro, configura las cabezeras 
+https://developer.mozilla.org/es/docs/Web/HTTP/Access_control_CORS
+es un  por lo que se ejecuta antes que las peticiones
+*/
+app.use((req, res, next) => {
+  // en vez de '*' sería poner la url permitida u origenes permitidos
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+    res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
+    next();
+});
 // rutas ********************************
 // sobreescribe la ruta para que la cargue en app
 // use --> para crear el middleware

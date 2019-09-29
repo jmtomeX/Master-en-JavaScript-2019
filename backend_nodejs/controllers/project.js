@@ -1,6 +1,8 @@
 "use strict";
 // para crear un nuevo proyecto hay que imoportar el módelo
 const Project = require("../models/project");
+// importar libreria fs(filesystem) para borrar archivos
+var fs = require("fs");
 // controladores rutas
 var controller = {
   home: function(req, res) {
@@ -13,6 +15,10 @@ var controller = {
       mesagge: "Soy el método test del controlador de project"
     });
   },
+  /*
+    request los datos del body de la petición y los parametros que le envies en la petición a la url del api
+    y response la respuesta que va a devolver el api
+    */
 
   // método para guardas nuevos documentos
   saveProject: function(req, res) {
@@ -37,7 +43,6 @@ var controller = {
       return res.status(200).send({ project: projectStored });
       console.log("Archivos subidos con exito");
     });
-
     /*return res.status(200).send({
       project:project,
       mesagge: "Método SaveProject"
@@ -132,6 +137,89 @@ var controller = {
         project: projectRemove
       });
     });
+  },
+  // Método para subir ficheros (imagenes)
+  uploadImage: function(req, res) {
+    var projectId = req.params.id;
+    var fileName = "Imagen no subida...";
+
+    if (req.files) {
+      // sacamos la ruta de la imagen
+      var filePath = req.files.image.path;
+      // sacamos el nombre real recortado de la ruta
+      // "path": "uploads\\1N4TXfDFqm5gDp5MWAiiXTVk.jpg"
+      var fileSplit = filePath.split("\\");
+      var fileName = fileSplit[1]; // devuleve --> el nombre del archivo // devuelve --> 1N4TXfDFqm5gDp5MWAiiXTVk.jpg
+      console.log("Carpeta destino " + fileSplit[0]); // devuleve --> uploads
+      // variable para recoger la extensión del archivo para comprobar que sea correcta
+      var extSplit = fileName.split(".");
+      var fileExt = extSplit[1]; // <-- extensión
+      // com probar tipo de archivo
+      if (
+        fileExt == "png" ||
+        fileExt == "jpg" ||
+        fileExt == "jpeg" ||
+        fileExt == "gif"
+      ) {
+        // le pasamos la propiedad imagen para que la guarde
+        Project.findByIdAndUpdate(
+          projectId,
+          // le pasamos para que guarde el nombre del fichero
+          { image: fileName },
+          // para que devuelva el último objeto guardado
+          { new: true },
+          (err, projectUpdated) => {
+            if (err) {
+               // eliminamos el archivo de la carpeta del servidor si nos da un error
+              fs.unlink(filePath, err => {
+                if (err) {
+                  console.log(err);
+                }
+                console.log(
+                  "Archivo eliminado porque no se encontro el proyecto o id no valido"
+                );
+              });
+              return res
+                .status(500)
+                .send({ message: "La imagen no se ha subido." });
+            }
+            if (!projectUpdated) {
+              // eliminamos el archivo de la carpeta del servidosr si no se encuentra el proyecto
+              fs.unlink(filePath, err => {
+                if (err) {
+                  console.log(err);
+                }
+                console.log(
+                  "Archivo eliminado porque no se encontro el proyecto o id no valido"
+                );
+              });
+
+              return res
+                .status(404)
+                .send({
+                  mesagge: "El proyecto no existey no se ha subido la imagen."
+                });
+            }
+            return res.status(200).send({
+              project: projectUpdated,
+              message: req.files
+            });
+          }
+        );
+        // en el caso de que no sea ninguno la borra, hay que exprotar la libreria ls
+      } else {
+        fs.unlink(filePath, err => {
+          return res.status(200).send({
+            mesagge: "La extensión no es valida"
+          });
+        });
+      } // cierre else extensión inválida
+    } // cierre del if(req.files)
+    else {
+      return res.status(200).send({
+        message: fileName
+      });
+    }
   }
 };
 module.exports = controller;
