@@ -7,7 +7,7 @@ $(document).ready(function () {
     $('#electricidad').bind('click', traerDatos);
     $('#prl').bind('click', traerDatos);
     $('#experiencia').bind('click', traerDatos);
-
+    
     // Método para recuperar los datos y escribirlo en pantalla
     function traerDatos(evento) {
         var cajaPosts = document.querySelector('#posts');
