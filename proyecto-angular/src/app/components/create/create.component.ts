@@ -35,20 +35,19 @@ export class CreateComponent implements OnInit {
   }
 
   onSubmit(form) {
-    console.log(this.project);
-    
-    // Guardar datos b´çasicos
+    // Guardar datos básicos
     this._projectService.saveProject(this.project).subscribe(
       response => {
         if(response.project){
           // Subir las imagenes
           this._uploadService.makeFileRequest(Global.url + "upload-image/" +  response.project._id, [], this.filesToUpLoad,'image')
           .then((result:any) => {
-
+            
             this.status = 'succes';
-
+            console.log(this.project); 
             form.reset();
           });
+
         }else {
           this.status = 'failed';          
         }
@@ -60,7 +59,8 @@ export class CreateComponent implements OnInit {
   }
 
   fileChangeEvent(fileInput: any) {
-    // Preparar todos los archivos que seleccionamos con targer del input
+    // Preparar todos los archivos que seleccionamos con target del input
 this.filesToUpLoad = <Array<File>>fileInput.target.files;
+console.log(fileInput);
   }
 }

@@ -3,6 +3,9 @@
 const Project = require("../models/project");
 // importar libreria fs(filesystem) para borrar archivos
 var fs = require("fs");
+// modulo que permite cargar rutas de nuestro sistema de archivos
+var path = require('path');
+
 // controladores rutas
 var controller = {
   home: function(req, res) {
@@ -155,6 +158,7 @@ var controller = {
       var extSplit = fileName.split(".");
       var fileExt = extSplit[1]; // <-- extensión
       // com probar tipo de archivo
+      console.log("Mostrar req." + req.files.image);
       if (
         fileExt == "png" ||
         fileExt == "jpg" ||
@@ -197,7 +201,7 @@ var controller = {
               return res
                 .status(404)
                 .send({
-                  mesagge: "El proyecto no existey no se ha subido la imagen."
+                  mesagge: "El proyecto no existe y no se ha subido la imagen."
                 });
             }
             return res.status(200).send({
@@ -220,6 +224,19 @@ var controller = {
         message: fileName
       });
     }
+  },
+  getImageFile: function(req,res){
+    var file = req.params.image;
+    var path_file = './uploads/' + file;
+    fs.exists(path, (exists) =>{
+      if(exists){
+        return res.sendFile(path_file.resolve(path));
+      }else {
+        return res.status(200).send({
+          message: "NO existe la imagen..."
+        });
+      }
+    });
   }
 };
 module.exports = controller;

@@ -28,5 +28,7 @@ router.delete('/project/:id', ProjectController.deleteProject);
 // Subir imagen al servidor
 // para que se ejecute le Middleware se le pasa como segundo parámetro
 router.post('/upload-image/:id', multipartMiddleware, ProjectController.uploadImage);
+// ruta para mostrar la imagenes en projects
+router.get('/get-image/:image',ProjectController.getImageFile);
 // utliza la variable router para poderlo utilizarolo importarlo
 module.exports = router;
