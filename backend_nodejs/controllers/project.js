@@ -155,10 +155,12 @@ var controller = {
       var fileName = fileSplit[1]; // devuleve --> el nombre del archivo // devuelve --> 1N4TXfDFqm5gDp5MWAiiXTVk.jpg
       console.log("Carpeta destino " + fileSplit[0]); // devuleve --> uploads
       // variable para recoger la extensión del archivo para comprobar que sea correcta
-      var extSplit = fileName.split(".");
+      var extSplit = fileName.split("\.");
       var fileExt = extSplit[1]; // <-- extensión
+      fileExt = fileExt.toLocaleLowerCase();
       // com probar tipo de archivo
       console.log("Mostrar req." + req.files.image);
+      console.log(extSplit[1]);
       if (
         fileExt == "png" ||
         fileExt == "jpg" ||
@@ -175,7 +177,7 @@ var controller = {
           (err, projectUpdated) => {
             if (err) {
                // eliminamos el archivo de la carpeta del servidor si nos da un error
-              fs.unlink(filePath, err => {
+              fs.unlink(filePath, (err) => {
                 if (err) {
                   console.log(err);
                 }
@@ -189,7 +191,7 @@ var controller = {
             }
             if (!projectUpdated) {
               // eliminamos el archivo de la carpeta del servidosr si no se encuentra el proyecto
-              fs.unlink(filePath, err => {
+              fs.unlink(filePath, (err) => {
                 if (err) {
                   console.log(err);
                 }
@@ -212,7 +214,7 @@ var controller = {
         );
         // en el caso de que no sea ninguno la borra, hay que exprotar la libreria ls
       } else {
-        fs.unlink(filePath, err => {
+        fs.unlink(filePath, (err) => {
           return res.status(200).send({
             mesagge: "La extensión no es valida"
           });
@@ -228,9 +230,9 @@ var controller = {
   getImageFile: function(req,res){
     var file = req.params.image;
     var path_file = './uploads/' + file;
-    fs.exists(path, (exists) =>{
+    fs.exists(path_file, (exists) =>{
       if(exists){
-        return res.sendFile(path_file.resolve(path));
+        return res.sendFile(path.resolve(path_file));
       }else {
         return res.status(200).send({
           message: "NO existe la imagen..."
@@ -238,5 +240,6 @@ var controller = {
       }
     });
   }
+  //coprobar imagenes http://localhost:3700/api/get-image/img.jpg
 };
 module.exports = controller;

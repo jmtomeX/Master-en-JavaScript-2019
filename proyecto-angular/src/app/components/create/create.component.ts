@@ -20,7 +20,8 @@ export class CreateComponent implements OnInit {
   public status:string;
   // Archivos para subir
   public filesToUpLoad: Array<File>;
-
+  // valor para la ruta de pincha para ver el proyecto
+  public saveProject;
   constructor(
     // propiedades del servicio
     private _projectService: ProjectService,
@@ -42,9 +43,8 @@ export class CreateComponent implements OnInit {
           // Subir las imagenes
           this._uploadService.makeFileRequest(Global.url + "upload-image/" +  response.project._id, [], this.filesToUpLoad,'image')
           .then((result:any) => {
-            
+            this.saveProject = result.project;
             this.status = 'succes';
-            console.log(this.project); 
             form.reset();
           });
 

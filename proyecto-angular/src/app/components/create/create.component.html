@@ -3,7 +3,7 @@
     <!-- Si el formulario ha sido enviado -->
     <div class="message succes" *ngIf= "status == 'succes'">
         El proyecto se ha creado correctamente. puedes verlo 
-        <a href="#">aqui</a>
+        <a [routerLink]= "['/proyecto',saveProject._id]">aqui</a>
     </div>
     <div class="message failed" *ngIf= "status == 'failed'">
         El proyecto NO SE HA PODIDO CREAR.
