@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="project">
     <h2>{{ title }}</h2>
     <!-- Si el formulario ha sido enviado -->
     <div class="message succes" *ngIf= "status == 'succes'">
@@ -48,6 +48,10 @@
         </p>
         <p>
             <label for="image">Imagen del proyecto</label>
+             <!-- si existe la imagen la muestra -->
+            <span class="image" *ngIf= "project.image"> 
+                <img src="{{url+'get-image/' + project.image}}" *ngIf="project.image" style = "width:100px"/>
+             </span>
             <!-- evento (change) cuando se haga un cambio en el input lanza un método -->
             <input type="file" name="image" placeholder="Subir imagen" (change) = "fileChangeEvent($event)" />
         </p>

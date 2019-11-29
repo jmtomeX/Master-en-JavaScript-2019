@@ -1,1 +1,23 @@
-<p>contact works!</p>
+<div id="container">
+    <!-- componente padre -->
+    <h1>Contact</h1>
+    Tamaño de Slider
+    
+    <input type="number" [(ngModel)]="widthSlider"/>
+ 
+        <button (click)="cargarSlider();" >Cargar Slider</button>
+        <button (click)="resetSlider();" >Resetear Slider</button>
+
+
+    <!-- <div> -->
+    <div *ngIf="withToSlider">
+
+        <!-- componente hijo -->
+        <!-- utilizar el método getAutor, $event para conseguir los datos -->
+        <slider [anchura]="withToSlider"
+            [etiquetas]="captions"
+            (getAutor)="getAutorFather($event)"
+        ></slider>
+    </div>
+    {{"Autor: " + autor.nombre + " web: " + autor.web}}
+</div>

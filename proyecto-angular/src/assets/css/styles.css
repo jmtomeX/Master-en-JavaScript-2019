@@ -1,19 +1,3 @@
-@font-face {
-  font-family: "OpenSans-Bold";
-  src: url("../fonts/OpenSans-Bold.ttf");
-}
-@font-face {
-  font-family: "Ostrich";
-  src: url("../fonts/ostrich-regular.ttf");
-}
-@font-face {
-  font-family: "PlayfairDisplay";
-  src: url("../fonts/PlayfairDisplay-Regular.otf");
-}
-@font-face {
-  font-family: "Mansalva-Regular";
-  src: url("../fonts/Mansalva-Regular.ttf");
-}
 *,
 *::before,
 *::after {
@@ -43,6 +27,52 @@
   --font-name: "Mansalva-Regular";
   --font-cabezera: "OpenSans-Bold";
 }
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {  }
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {  }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {  }
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (max-width: 1200px) { 
+  header {
+    height: calc(var(--header-height) - 2em) ;
+    min-width: 778px;
+  }
+  header ul  {
+    text-align: center;
+  }
+  #logo {
+    display: none;
+  }
+  header ul li {
+    font-size: .6em;
+    transition: initial;
+  }
+  #content{
+    width: 100%;
+  }
+ }
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url("../fonts/OpenSans-Bold.ttf");
+}
+@font-face {
+  font-family: "Ostrich";
+  src: url("../fonts/ostrich-regular.ttf");
+}
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url("../fonts/PlayfairDisplay-Regular.otf");
+}
+@font-face {
+  font-family: "Mansalva-Regular";
+  src: url("../fonts/Mansalva-Regular.ttf");
+}
+
 body {
   font-family: PlayfairDisplay;
   font-size: 1.1em;
@@ -111,7 +141,6 @@ header a:hover,
 /* contenedor principal */
 #content {
   min-height: 100vh;
-  height: auto;
   width: 75%;
   margin-left: auto;
   margin-right: auto;
@@ -174,6 +203,20 @@ article.about p {
 /*Sección con formulario*/
 .container {
   padding: 50px;
+  width: 90%;
+}
+.container .image {
+  float: left;
+  width: 30%;
+}
+.container .image img {
+  width: 100%;
+}
+.container .data {
+  float: left;
+  width: 65%;
+  margin-left: 1em;
+  margin-bottom: 4em;
 }
 .container h2 {
   display: block;
@@ -204,11 +247,13 @@ form textarea {
 .errorForm {
   display: block;
   width: 100%;
-  font-size: .6em;
-  opacity: .7;
+  font-size: 0.6em;
+  opacity: 0.7;
 }
 /* Botón formulario*/
-form .button {
+form .button,
+.button-edit,
+.button-delete {
   position: relative;
   padding: 1em 1.5em;
   border: none;
@@ -219,15 +264,38 @@ form .button {
   margin: 1em 0.8em;
 }
 
-form .button[disabled]{
-  opacity: .2;
+form .button[disabled] {
+  opacity: 0.2;
 }
-.button.type1 {
-  color:var(--red-prin);
+.button.type1
+ {
+  color: var(--red-prin);
   float: right;
   margin-right: 20%;
 }
-.button.type1.type1::after, .button.type1.type1::before {
+
+.button-edit.detail,
+.button-delete.detail  {
+  margin-top: 2em;
+  color: var(--red-prin);
+  text-decoration: none;
+}
+.button-edit.detail
+ {
+  color: black;
+}
+.button-delete.detail  {
+  margin-top: 2em;
+  color: var(--red-prin);
+  text-decoration: none;
+}
+
+.button.type1.type1::after,
+.button.type1.type1::before,
+.button-edit::after,
+.button-edit::before,
+.button-delete::after,  
+.button-delete::before  {
   content: "";
   display: block;
   position: absolute;
@@ -237,16 +305,28 @@ form .button[disabled]{
   transition: all 0.6s ease;
   border-radius: 2px;
 }
-.button.type1.type1::after {
+.button.type1.type1::after,
+.button-edit::after,
+.button-delete::after 
+{
   bottom: 0;
   right: 0;
   border-top-color: transparent;
   border-left-color: transparent;
-  border-bottom-color:var(--red-prin);
+  border-bottom-color: var(--red-prin);
   border-right-color: var(--red-prin);
-;
 }
-.button.type1.type1::before {
+
+.button-edit::after
+{
+
+  border-bottom-color: black;
+  border-right-color: black;
+}
+.button.type1.type1::before,
+.button-edit::before,
+.button-delete::before 
+ {
   top: 0;
   left: 0;
   border-bottom-color: transparent;
@@ -254,29 +334,52 @@ form .button[disabled]{
   border-top-color: var(--red-prin);
   border-left-color: var(--red-prin);
 }
-.button.type1.type1:hover:after, .button.type1.type1:hover:before {
+.button-edit::before
+
+ {
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: black;
+  border-left-color: black;
+}
+.button.type1.type1:hover:after,
+.button.type1.type1:hover:before,
+.button-edit:hover::after,
+.button-edit:hover::before,
+.button-delete:hover::after,  
+.button-delete:hover::before  {
   width: 100%;
   height: 100%;
 }
 
 .message {
-  padding: .3em;
+  padding: 0.3em;
   width: 50%;
-  margin-bottom: .3em;
+  margin-bottom: 0.3em;
   color: whitesmoke;
 }
 .succes {
   background: var(--red-prin);
 }
-.succes a{
+.succes a {
   text-decoration: none;
   color: black;
 }
-.failed{
-  background: rgba(0, 0, 0,.6);
+.failed {
+  background: rgba(0, 0, 0, 0.6);
   color: white;
 }
+.msg-confirm{
+  float: left;
+  margin-top: 1.5em;
+  color: var(--red-prin);
+  top: -100px;
 
+}
+.menuDelete{
+  width: 60%;
+  float: right;
+}
 /* Página de proyectos*/
 .project {
   display: block;
@@ -287,6 +390,7 @@ form .button[disabled]{
 }
 .project img {
   width: 100%;
+  margin-bottom: 2em;;
 }
 .project .image {
   width: 100%;
@@ -297,4 +401,3 @@ form .button[disabled]{
   text-decoration: none;
   color: black;
 }
-
