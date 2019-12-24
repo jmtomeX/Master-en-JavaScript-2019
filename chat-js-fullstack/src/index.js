@@ -12,7 +12,7 @@ const server = http.createServer(app);
 const io = socketio.listen(server);
 
 // settings
-// obtener el puerto si el servidor da un puerto se utiliza si no usa el 3000
+// obtener el puerto si el servidor da un puerto se utiliza, si no usa el 3000
 app.set('port', process.env.PORT || 3000);
 
 // ejecutamos la función
@@ -24,5 +24,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // escuchando el servidor
 server.listen(app.get('port'), () => {
-    console.log('server on port ', app.get('port'));
+    console.log('Servidor en puerto ', app.get('port'));
 });

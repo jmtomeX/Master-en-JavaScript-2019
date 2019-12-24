@@ -30,12 +30,7 @@ function render(data) {
     </div>
   </div>
     `);
-    // return (`
-    // <div class="message">
-    //   <b>${message.nickname}</b>
-    //   <p>${message.text}</p>
-    // <div>
-    // `);
+
   }).join(' ');
   var div_msg = document.getElementById("messages");
   div_msg.innerHTML = html;
