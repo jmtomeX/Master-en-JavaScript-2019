@@ -5,11 +5,19 @@ const path = require('path');
 const express = require ('express');
 const socketio = require ('socket.io');
 
+// mongoose para conectar con mongoDB
+const mongoose = require('mongoose');
+
 const app = express();
 const server = http.createServer(app);
 
 // escucha en el servidor creado
 const io = socketio.listen(server);
+
+// db connection
+mongoose.connect('mongodb://localhost/chat-database')
+.then(db => console.log("Conectado a la base de datos"))
+.catch(err => console.log(err))
 
 // settings
 // obtener el puerto si el servidor da un puerto se utiliza, si no usa el 3000
