@@ -59,6 +59,6 @@ exports.postLogin = (req, res, next) => {
 
 // logout
 exports.logout = (req, res) => {
-    res.logout();
+    req.logout();
     res.send('Logout exitoso');
 }
