@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        title Mi página con Express
+    body
+        -let saludo = "Buenas tardes"
+        -let name = "Jose Mari"
+        h1 !{saludo}
+        //- h1 !{saludo_app} no funciona
+        h2 Qué tal estamos?, #{name.toUpperCase()}
+        - var array_numeros = [1,2,3,4,5];
+        - var es="";
+        - for (var i = 0; i < array_numeros.length; i++)
+            if(array_numeros[i]%2 == 0)
+                - es = "par";
+            else
+                - es = "impar";
+            p= array_numeros[i]
+            p Número #{es} #{array_numeros[i]}
+            p. 
+            Haz click en el link #[a(href="https://www.muchoruidoypocasluces.com/" target="_blank") aquí]
+
+        - var array_string = ["User", "has", "no", "description"]
+         each item in array_string
+            h4= item
+            case item
+                when "User"
+                    p Usuario
+                when "has"
+                    p "tiene"
+                default 
+                    p "Era otra palabra"
+
+        - var user = { description: 'foo bar baz' }
+        - var authorised = true
+        #user
+            if user.description
+                h2.green Description
+                p.description= user.description
+            else if authorised
+                h2.blue Description
+                p.description.
+                    User has no description,
+                    why not add one...
+            else
+                h2.red Description
+                p.description User has no description

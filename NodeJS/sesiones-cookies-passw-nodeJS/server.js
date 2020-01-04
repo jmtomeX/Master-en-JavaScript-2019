@@ -61,7 +61,7 @@ app.use(session({
     secret:'ESTO ES SECRETO',
     // fuerza por cada llamada al servidor guardar en la base de datos tenga cambios o no
     resave:true,
-    // guarda el objeto vacio, si se marca como false no guarda el objeto a no ser de que el objeto tenga propiedads
+    // guarda el objeto vacio, si se marca como false no guarda el objeto a no ser de que el objeto tenga propiedades
     saveUninitialized:true,
     // que utilice el store de mongodb
     store:new MongoStore({

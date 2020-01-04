@@ -22,7 +22,7 @@ passport.use(
   new LocalStrategy(
     // lo que se utiiliza como username
     { usernameField: "email" },
-    (email, passwors, done) => {
+    (email, password, done) => {
       // utilizamos el modelo para buscar el usuario en la base de datos
       Usuario.findOne({ email }, (err, usuario) => {
         // di no está
